@@ -1,0 +1,119 @@
+.navWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: top 0.3s;
+}
+
+.navContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
+
+.logoContainer {
+  width: auto;
+  padding: 0.4rem 1rem;
+  cursor: default;
+}
+
+.navItemsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navItem {
+  width: auto;
+  padding: 0.4rem 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.navItem:last-child{
+  margin-right: 0;
+}
+
+.darkMode {
+  width: auto;
+  position: absolute;
+  top: 5rem;
+  right: 4rem;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+.dropdown {
+  padding: 0.5rem 0.8rem;
+  display: none;
+}
+
+.scrollToTop {
+  width: auto;
+  position: fixed;
+  bottom: 6rem;
+  right: 4rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.navItemsDropdown {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navItemDropdown {
+  width: auto;
+  padding: 0.4rem 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .navContainer {
+    padding: 1rem 2rem;
+  }
+  .darkMode {
+    right: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navContainer {
+    padding: 1rem;
+  }
+  .darkMode {
+    right: 1rem;
+  }
+  .scrollToTop{
+    right: 1rem;
+  }
+  .navItemsContainer {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
+  .navItemsDropdown {
+    display: flex;
+  }
+}

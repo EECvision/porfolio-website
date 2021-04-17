@@ -1,0 +1,8 @@
+.buttonContainer {
+  width: auto;
+  padding: 1rem 2.5rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}

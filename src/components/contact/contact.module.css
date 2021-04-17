@@ -1,0 +1,93 @@
+.contactContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 36rem;
+}
+
+.header {
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.mainText {
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text {
+  max-width: 40rem;
+  text-align: center;
+  font-weight: medium;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contactHeader {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactHeader span {
+  margin-right: 1rem;
+}
+
+.contactList {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+}
+
+.contact:nth-child(2){
+  margin: 0 1rem;
+}
+
+
+@media (max-width: 1024px){
+  .contactContainer {
+    padding: 0 4rem;
+  }  
+}
+
+@media (max-width: 768px){
+  .contactContainer {
+    padding: 0 2rem;
+  }  
+}
+
+@media (max-width: 425px){
+  .contactContainer {
+    padding: 0 1rem;
+  }  
+  .header {
+    margin-bottom: 2rem;
+  }
+  .mainText {
+    margin-bottom: 2rem;
+  }
+  .mainText {
+    font-size: 1.5rem;
+  }
+  .text {
+    font-size: 1.1rem;
+  }
+}

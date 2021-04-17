@@ -1,0 +1,50 @@
+.projectsWrapper {
+  width: 100%;
+  max-width: 1024px;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header {
+  width: 100%;
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.projectsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+@media (max-width: 1024px){
+  .projectsWrapper {
+    padding: 0 4rem;
+  }  
+}
+
+@media (max-width: 768px){
+  .projectsWrapper {
+    padding: 0 2rem;
+  }  
+}
+
+@media (max-width: 425px){
+  .projectsWrapper {
+    padding: 0 1rem;
+  }  
+
+  .header {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
