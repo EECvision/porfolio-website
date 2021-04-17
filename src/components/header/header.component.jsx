@@ -2,7 +2,7 @@ import styles from './header.module.css';
 import { useEffect, useState, useRef, useContext } from 'react';
 import { ThemeContext } from '../../states/theme/theme.context';
 import { toggleMode } from '../../states/theme/theme.actions';
-import LinkItem from './link-item.component';
+import LinkItem from '../link/link.component';
 
 const Header = () => {
 
@@ -36,13 +36,13 @@ const Header = () => {
         <div style={{ background: elementColor }} className={styles.logoContainer}>EECvision</div>
         <div className={styles.navItemsContainer}>
           <div style={{ background: elementColor }} className={styles.navItem}>
-            <LinkItem>About</LinkItem>
+            <LinkItem url='about' clickHandler={()=>{}}>About</LinkItem>
           </div>
           <div style={{ background: elementColor }} className={styles.navItem}>
-            <LinkItem>Projects</LinkItem>
+            <LinkItem url='projects' clickHandler={()=>{}}>Projects</LinkItem>
           </div>
           <div style={{ background: elementColor }} className={styles.navItem}>
-            <LinkItem>Contact</LinkItem>
+            <LinkItem url='contact' clickHandler={()=>{}}>Contact</LinkItem>
           </div>
         </div>
         <div style={{ border: `0.12rem solid ${textColor}` }} className={styles.dropdown}>
@@ -56,13 +56,13 @@ const Header = () => {
         </div>
         <div style={{ background: backgroundColor, height: `${dropdown ? '12rem' : '0'}` }} className={styles.navItemsDropdown}>
           <div className={styles.navItemDropdown}>
-            <LinkItem clickHandler={() => toggleDropdown(false)}>About</LinkItem>
+            <LinkItem url='about' clickHandler={() => toggleDropdown(false)}>About</LinkItem>
           </div>
           <div className={styles.navItemDropdown}>
-            <LinkItem clickHandler={() => toggleDropdown(false)}>Projects</LinkItem>
+            <LinkItem url='projects' clickHandler={() => toggleDropdown(false)}>Projects</LinkItem>
           </div>
           <div className={styles.navItemDropdown}>
-            <LinkItem clickHandler={() => toggleDropdown(false)}>Contact</LinkItem>
+            <LinkItem url='contact' clickHandler={() => toggleDropdown(false)}>Contact</LinkItem>
           </div>
         </div>
         <div style={{ background: backgroundColor, color: inputColor, border: `0.13rem solid ${inputColor}` }} onClick={() => dispatch(toggleMode())} className={styles.darkMode}>

@@ -3,6 +3,7 @@ import { gotoContact } from '../../states/nav/nav.actons';
 import { NavContext } from '../../states/nav/nav.context';
 import { ThemeContext } from '../../states/theme/theme.context';
 import Button from '../button/button.component';
+import LinkItem from '../link/link.component';
 import styles from './banner.module.css';
 
 const Banner = () => {
@@ -20,7 +21,9 @@ const Banner = () => {
         I never stopped seeing myself breaking limits. 
         Every bit of code I write is a new commit to the previous version of myself.
       </p>
-        <Button clickHandler={()=>dispatchNav(gotoContact())}>Let's build together</Button>
+        <Button clickHandler={()=>dispatchNav(gotoContact())}>
+          <LinkItem url='contact' clickHandler={()=>{}}>Let's build together</LinkItem>
+        </Button>
     </article>
   )
 }
