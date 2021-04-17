@@ -1,19 +1,12 @@
 import styles from './about.module.css';
 import myImage from '../../assets/image-eec.png';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../../states/theme/theme.context';
-import { NavContext } from '../../states/nav/nav.context';
 
 const tools = ['React', 'Javascript', 'Node.js', 'Express.js', 'CSS', 'HTML', 'Github', 'Firebase', 'MongoDB'];
 
 const About = () => {
-  const aboutRef = useRef(null);
   const { textColor, inputColor, backgroundColor } = useContext(ThemeContext);
-  const { about } = useContext(NavContext);
-
-  useEffect(()=>{
-    if(about) aboutRef.current.scrollIntoView();
-  })
 
   const Tool = ({ children }) => (
     <li className={styles.tool}>
@@ -23,7 +16,7 @@ const About = () => {
   )
 
   return (
-    <article ref={aboutRef} style={{ color: textColor }} className={styles.aboutWrapper}>
+    <article id="about" style={{ color: textColor }} className={styles.aboutWrapper}>
       <header className={styles.aboutHeader}>About myself</header>
       <section className={styles.aboutSection}>
         <div className={styles.aboutContainer}>

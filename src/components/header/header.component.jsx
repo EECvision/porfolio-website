@@ -2,14 +2,12 @@ import styles from './header.module.css';
 import { useEffect, useState, useRef, useContext } from 'react';
 import { ThemeContext } from '../../states/theme/theme.context';
 import { toggleMode } from '../../states/theme/theme.actions';
-import { gotoAbout, gotoContact, gotoProject, scrollToTop } from '../../states/nav/nav.actons';
-import { NavContext } from '../../states/nav/nav.context';
+import LinkItem from './link-item.component';
 
 const Header = () => {
 
   const [dropdown, toggleDropdown] = useState(false)
   const { backgroundColor, elementColor, textColor, mode, dispatch, inputColor } = useContext(ThemeContext);
-  const { dispatchNav } = useContext(NavContext);
 
   const headerRef = useRef(null);
   const scrollRef = useRef(null)
@@ -20,7 +18,7 @@ const Header = () => {
       if (prevScrollpos > currentScrollPos) {
         headerRef.current.style.top = "0";
       } else {
-        headerRef.current.style.top = "-70px";
+        headerRef.current.style.top = "-100px";
       }
       prevScrollpos = currentScrollPos;
 
@@ -37,11 +35,17 @@ const Header = () => {
       <div className={styles.navContainer}>
         <div style={{ background: elementColor }} className={styles.logoContainer}>EECvision</div>
         <div className={styles.navItemsContainer}>
-          <div onClick={() => dispatchNav(gotoAbout())} style={{ background: elementColor }} className={styles.navItem}>About</div>
-          <div onClick={() => dispatchNav(gotoProject())} style={{ background: elementColor }} className={styles.navItem}>Projects</div>
-          <div onClick={() => dispatchNav(gotoContact())} style={{ background: elementColor }} className={styles.navItem}>Contact</div>
+          <div style={{ background: elementColor }} className={styles.navItem}>
+            <LinkItem>About</LinkItem>
+          </div>
+          <div style={{ background: elementColor }} className={styles.navItem}>
+            <LinkItem>Projects</LinkItem>
+          </div>
+          <div style={{ background: elementColor }} className={styles.navItem}>
+            <LinkItem>Contact</LinkItem>
+          </div>
         </div>
-        <div style={{border: `0.12rem solid ${textColor}`}} className={styles.dropdown}>
+        <div style={{ border: `0.12rem solid ${textColor}` }} className={styles.dropdown}>
           {
             dropdown
               ?
@@ -51,19 +55,22 @@ const Header = () => {
           }
         </div>
         <div style={{ background: backgroundColor, height: `${dropdown ? '12rem' : '0'}` }} className={styles.navItemsDropdown}>
-          <div onClick={() =>{ dispatchNav(gotoAbout()); toggleDropdown(!dropdown)}} className={styles.navItemDropdown}>About</div>
-          <div onClick={() =>{ dispatchNav(gotoProject()); toggleDropdown(!dropdown)}} className={styles.navItemDropdown}>Projects</div>
-          <div onClick={() =>{ dispatchNav(gotoContact()); toggleDropdown(!dropdown)}} className={styles.navItemDropdown}>Contact</div>
+          <div className={styles.navItemDropdown}>
+            <LinkItem clickHandler={() => toggleDropdown(false)}>About</LinkItem>
+          </div>
+          <div className={styles.navItemDropdown}>
+            <LinkItem clickHandler={() => toggleDropdown(false)}>Projects</LinkItem>
+          </div>
+          <div className={styles.navItemDropdown}>
+            <LinkItem clickHandler={() => toggleDropdown(false)}>Contact</LinkItem>
+          </div>
         </div>
-        <div style={{ color: inputColor, border: `0.13rem solid ${inputColor}` }} onClick={() => dispatch(toggleMode())} className={styles.darkMode}>
-            <i style={{ marginRight: `${!mode ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
+        <div style={{ background: backgroundColor, color: inputColor, border: `0.13rem solid ${inputColor}` }} onClick={() => dispatch(toggleMode())} className={styles.darkMode}>
+          <i style={{ marginRight: `${!mode ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
         </div>
         <div
           style={{ color: textColor, border: `0.1rem solid ${textColor}` }}
-          onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-            dispatchNav(scrollToTop())
-          }}
+          onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
           ref={scrollRef} className={styles.scrollToTop}>
           <i className="fas fa-angle-up"></i>
         </div>

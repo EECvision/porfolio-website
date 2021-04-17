@@ -42,7 +42,7 @@
   font-weight: bold;
 }
 
-.contactHeader > span {
+.contactHeader > span:first-child {
   margin-right: 1rem;
 }
 
