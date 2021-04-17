@@ -42,8 +42,21 @@
   font-weight: bold;
 }
 
-.contactHeader span {
+.contactHeader > span {
   margin-right: 1rem;
+}
+
+.contactHeader i {
+  animation: bounce 3s cubic-bezier(1, 1, 1, 1) infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate(0, 2px);
+  }
+  to {
+    transform: translate(0, -2px);
+  }
 }
 
 .contactListContainer {
@@ -89,6 +102,9 @@
   .contactContainer {
     padding: 0 1rem;
   }  
+  .contactHeader {
+    font-size: 0.8rem;
+  }
   .header {
     margin-bottom: 2rem;
   }
@@ -99,6 +115,6 @@
     font-size: 1.5rem;
   }
   .text {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }

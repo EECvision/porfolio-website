@@ -8,6 +8,7 @@
   left: 0;
   z-index: 10;
   transition: top 0.3s;
+  box-shadow: 1px 1px 3px grey;
 }
 
 .navContainer {
@@ -49,14 +50,18 @@
   width: 2rem;
   height: 2rem;
   position: absolute;
-  top: 5rem;
+  top: 5.5rem;
   right: 4rem;
-  padding: 0.4rem;
+  padding: 0.4rem 2rem;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.darkMode i {
+  transition: all 0.2s ease-in-out;
 }
 
 .dropdown {

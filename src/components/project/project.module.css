@@ -184,6 +184,10 @@
     display: none;
   }
 
+  .linksInverted {
+    display: none;
+  }
+
   .upLinks {
     display: flex;
   }
@@ -191,6 +195,10 @@
   .link {
     padding: 0.2rem 0.4rem;
     border-radius: 0.2rem;
+  }
+
+  .name {
+    margin-right: 1rem;
   }
 }
 

@@ -44,14 +44,12 @@
 @media screen and (max-width: 768px) {
   .bannerContainer {
     padding: 0 2rem;
-    margin-top: 1.5rem;
   }
 }
 
 @media screen and (max-width: 425px) {
   .bannerContainer {
     padding: 0 1rem;
-    margin-top: 1rem;
   }
   .textContainer {
     font-size: 1rem;

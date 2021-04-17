@@ -55,14 +55,8 @@ const Header = () => {
           <div onClick={() =>{ dispatchNav(gotoProject()); toggleDropdown(!dropdown)}} className={styles.navItemDropdown}>Projects</div>
           <div onClick={() =>{ dispatchNav(gotoContact()); toggleDropdown(!dropdown)}} className={styles.navItemDropdown}>Contact</div>
         </div>
-        <div style={{ color: inputColor, border: `0.2rem solid ${inputColor}` }} onClick={() => dispatch(toggleMode())} className={styles.darkMode}>
-          {
-            mode
-              ?
-              <i className="fas fa-sun"></i>
-              :
-              <i className="fas fa-sun"></i>
-          }
+        <div style={{ color: inputColor, border: `0.13rem solid ${inputColor}` }} onClick={() => dispatch(toggleMode())} className={styles.darkMode}>
+            <i style={{ marginRight: `${!mode ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
         </div>
         <div
           style={{ color: textColor, border: `0.1rem solid ${textColor}` }}
@@ -71,7 +65,7 @@ const Header = () => {
             dispatchNav(scrollToTop())
           }}
           ref={scrollRef} className={styles.scrollToTop}>
-          <i class="fas fa-angle-up"></i>
+          <i className="fas fa-angle-up"></i>
         </div>
       </div>
     </nav>

@@ -24,15 +24,14 @@ const Contact = () => {
       </p>
       <p className={styles.contactHeader}>
         <span style={{ color: textColor }}>I am always available via </span>
-        <i
-          style={{ background: elementColor, padding: '0.5rem 1rem', borderRadius: '0.3rem', color: inputColor }}
-          className="icon fas fa-long-arrow-alt-down">
-        </i>
+        <span style={{ background: elementColor, padding: '0.4rem 1rem', borderRadius: '0.3rem', color: inputColor }}>
+          <i className="icon fas fa-long-arrow-alt-down"></i>
+        </span>
       </p>
       <div className={styles.contactListContainer}>
-        <div style={{ color: textColor }} className={styles.contact}> <i class="far fa-envelope"></i> ezekaemmanuel1710@gmail.com </div>
-        <div style={{ color: textColor }} className={styles.contact}> <i class="fas fa-phone-alt"></i> +234 80 6481 9800 </div>
-        <a style={{ border: `0.125rem solid ${inputColor}` }} className={styles.contact} href="https://twitter.com/EECvision"> <i class="fab fa-twitter"></i> </a>
+        <div style={{ color: textColor }} className={styles.contact}> <i className="far fa-envelope"></i> ezekaemmanuel1710@gmail.com </div>
+        <div style={{ color: textColor }} className={styles.contact}> <i className="fas fa-phone-alt"></i> +234 80 6481 9800 </div>
+        <a style={{ border: `0.125rem solid ${inputColor}` }} className={styles.contact} href="https://twitter.com/EECvision"> <i className="fab fa-twitter"></i> </a>
       </div>
     </section>
   )
