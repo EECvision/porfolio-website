@@ -22,7 +22,7 @@ const Projects = () => {
           ))
         }
       </section>
-      <Button clickHandler={()=>toggleFilter(!filter)}>View more projects</Button>
+      <Button clickHandler={()=>toggleFilter(!filter)}>{`View more ${filter ? 'less' : 'more'}`}</Button>
     </div>
   )
 }

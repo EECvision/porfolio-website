@@ -1,22 +1,18 @@
 import styles from './project.module.css';
 import previewEasyBank from '../../assets/preview-easy-bank.jpg';
-import previewJobListing from '../../assets/preview-job-listing.jpg';
-import previewManage from '../../assets/preview-manage.jpg';
 import previewRoom from '../../assets/preview-room.jpg';
-import previewSocialMedia from '../../assets/preview-social.jpg';
 import previewTodo from '../../assets/preview-todo.jpg';
 import previewNote from '../../assets/preview-note.PNG';
 import previewNuf from '../../assets/preview-nuf.png';
 import previewShop from '../../assets/preview-shop.png';
+import previewCountry from '../../assets/preview-country.png';
 import { useContext } from 'react';
 import { ThemeContext } from '../../states/theme/theme.context';
 
 const previews = {
   previewEasyBank: previewEasyBank,
-  previewJobListing: previewJobListing,
-  previewManage: previewManage,
+  previewCountry: previewCountry,
   previewRoom: previewRoom,
-  previewSocialMedia: previewSocialMedia,
   previewTodo: previewTodo,
   previewNote: previewNote,
   previewNuf: previewNuf,

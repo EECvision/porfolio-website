@@ -30,33 +30,43 @@ const PROJECT_DATA = [
   },
   {
     id: 4,
+    name: 'country-platter',
+    description: 'A REST API website that serves up data related to countries of the world.',
+    githubUrl: 'https://github.com/EECvision/country-platter',
+    icon: 'previewCountry',
+    tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'HOOKS', 'CUSTOM CSS', 'API'],
+    liveUrl: 'https://country-platter.vercel.app',
+    invert: true
+  },
+  {
+    id: 5,
     name: 'room homepage',
     description: 'A representation of a responsive web page.',
     githubUrl: 'https://github.com/EECvision/room-homepage',
     icon: 'previewRoom',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
     liveUrl: 'https://eecvision.github.io/room-homepage',
-    invert: true
+    invert: false
   },
   {
-    id: 5,
+    id: 6,
     name: 'easy bank landing page',
     description: 'A representation of a responsive web page.',
     githubUrl: 'https://github.com/EECvision/easy-banking-landing-page',
     icon: 'previewEasyBank',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
     liveUrl: 'https://eecvision.github.io/easy-banking-landing-page',
-    invert: false
+    invert: true
   },
   {
-    id: 6,
+    id: 7,
     name: 'Task flow',
     description: 'A simple todo app with dark mode feature, supports drag and drop.',
     githubUrl: 'https://github.com/EECvision/Todo-App',
     icon: 'previewTodo',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
     liveUrl: 'https://task-flow.netlify.app/',
-    invert: true
+    invert: false
   },
 ]
 
