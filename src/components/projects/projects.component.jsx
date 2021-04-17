@@ -23,7 +23,7 @@ const Projects = () => {
       <section className={styles.projectsContainer}>
         {
           data
-          .filter((_data, idx)=> idx <= (filter ? 2 : 20))
+          .filter((_data, idx)=> idx <= (filter ? 20 : 2))
           .map(_data => (
             <Project key={_data.id} {..._data} />
           ))

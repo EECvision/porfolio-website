@@ -41,7 +41,7 @@ const Header = () => {
           <div onClick={() => dispatchNav(gotoProject())} style={{ background: elementColor }} className={styles.navItem}>Projects</div>
           <div onClick={() => dispatchNav(gotoContact())} style={{ background: elementColor }} className={styles.navItem}>Contact</div>
         </div>
-        <div className={styles.dropdown}>
+        <div style={{border: `0.12rem solid ${textColor}`}} className={styles.dropdown}>
           {
             dropdown
               ?
@@ -51,11 +51,11 @@ const Header = () => {
           }
         </div>
         <div style={{ background: backgroundColor, height: `${dropdown ? '12rem' : '0'}` }} className={styles.navItemsDropdown}>
-          <div className={styles.navItemDropdown}>About</div>
-          <div className={styles.navItemDropdown}>Projects</div>
-          <div className={styles.navItemDropdown}>Contact</div>
+          <div onClick={() =>{ dispatchNav(gotoAbout()); toggleDropdown(!dropdown)}} className={styles.navItemDropdown}>About</div>
+          <div onClick={() =>{ dispatchNav(gotoProject()); toggleDropdown(!dropdown)}} className={styles.navItemDropdown}>Projects</div>
+          <div onClick={() =>{ dispatchNav(gotoContact()); toggleDropdown(!dropdown)}} className={styles.navItemDropdown}>Contact</div>
         </div>
-        <div style={{ color: inputColor }} onClick={() => dispatch(toggleMode())} className={styles.darkMode}>
+        <div style={{ color: inputColor, border: `0.2rem solid ${inputColor}` }} onClick={() => dispatch(toggleMode())} className={styles.darkMode}>
           {
             mode
               ?

@@ -59,6 +59,18 @@
   justify-content: flex-start;
 }
 
+.nameLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upLinks {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
 .name {
   font-size: 1.5rem;
   font-family: 'Nunito Sans', sans-serif;
@@ -93,7 +105,6 @@
   padding: 0.8rem;
   border-radius: 0.2rem;
   margin: 0 0.3rem;
-  color: rgb(49, 23, 97);
 }
 
 
@@ -146,7 +157,7 @@
     align-items: flex-start;
     justify-content: center;
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
   
   .dataContainer,
@@ -168,8 +179,18 @@
     justify-content: flex-start;
   }
 
-  .links{
+  .links {
     flex-direction: row-reverse;
+    display: none;
+  }
+
+  .upLinks {
+    display: flex;
+  }
+
+  .link {
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
   }
 }
 

@@ -8,7 +8,7 @@ const tools = ['React', 'Javascript', 'Node.js', 'Express.js', 'CSS', 'HTML', 'G
 
 const About = () => {
   const aboutRef = useRef(null);
-  const { textColor, inputColor } = useContext(ThemeContext);
+  const { textColor, inputColor, backgroundColor } = useContext(ThemeContext);
   const { about } = useContext(NavContext);
 
   useEffect(()=>{
@@ -45,8 +45,8 @@ const About = () => {
             }
           </ul>
         </div>
-        <div className={styles.imageWrapper}>
-          <img className={styles.imageContainer} src={myImage} alt="Emmanuel Ezeka" />
+        <div style={{border: `0.13rem solid ${inputColor}`}} className={styles.imageWrapper}>
+          <img style={{border: `0.1rem solid ${inputColor}`, background: backgroundColor}} className={styles.imageContainer} src={myImage} alt="Emmanuel Ezeka" />
         </div>
       </section>
     </article>

@@ -46,17 +46,25 @@
 }
 
 .darkMode {
-  width: auto;
+  width: 2rem;
+  height: 2rem;
   position: absolute;
   top: 5rem;
   right: 4rem;
   padding: 0.4rem;
   cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dropdown {
   padding: 0.5rem 0.8rem;
   display: none;
+  z-index: 5;
+  border-radius: 0.2rem;
+  cursor: pointer;
 }
 
 .scrollToTop {
@@ -67,6 +75,7 @@
   padding: 0.3rem 0.6rem;
   border-radius: 0.2rem;
   cursor: pointer;
+  z-index: 5;
 }
 
 .navItemsDropdown {
@@ -80,12 +89,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  z-index: 10;
 }
 
 .navItemDropdown {
   width: auto;
   padding: 0.4rem 1rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {

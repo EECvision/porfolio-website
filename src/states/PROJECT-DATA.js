@@ -2,7 +2,7 @@ const PROJECT_DATA = [
   {
     id: 1,
     name: 'splendor-luxeel',
-    description: 'An e-commerce website',
+    description: 'An e-commerce website aimed to support small and medium business(s).',
     githubUrl: 'https://github.com/EECvision/splendor-luxeel',
     icon: 'previewShop',
     liveUrl: 'https://splendor-luxeel.vercel.app',
@@ -12,7 +12,7 @@ const PROJECT_DATA = [
   {
     id: 2,
     name: 'Note-On',
-    description: 'A note-taking application',
+    description: 'A simple and flexible cloud based note-taking application.',
     githubUrl: 'https://github.com/EECvision/note-app',
     icon: 'previewNote',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
@@ -22,7 +22,7 @@ const PROJECT_DATA = [
   {
     id: 3,
     name: 'nuf9ja',
-    description: 'A music website for publishing, downling and sharing of songs',
+    description: 'A music website for publishing, downling and sharing of songs.',
     icon: 'previewNuf',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
     liveUrl: 'https://nuf9ja.herokuapp.com',
@@ -31,7 +31,7 @@ const PROJECT_DATA = [
   {
     id: 4,
     name: 'room homepage',
-    description: 'A representation of a responsive web page',
+    description: 'A representation of a responsive web page.',
     githubUrl: 'https://github.com/EECvision/room-homepage',
     icon: 'previewRoom',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
@@ -41,7 +41,7 @@ const PROJECT_DATA = [
   {
     id: 5,
     name: 'easy bank landing page',
-    description: 'A representation of a responsive web page',
+    description: 'A representation of a responsive web page.',
     githubUrl: 'https://github.com/EECvision/easy-banking-landing-page',
     icon: 'previewEasyBank',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
@@ -51,7 +51,7 @@ const PROJECT_DATA = [
   {
     id: 6,
     name: 'Task flow',
-    description: 'A simple todo app',
+    description: 'A simple todo app with dark mode feature, supports drag and drop.',
     githubUrl: 'https://github.com/EECvision/Todo-App',
     icon: 'previewTodo',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
