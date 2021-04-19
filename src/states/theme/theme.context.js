@@ -20,7 +20,7 @@ const ThemeContextProvider = ({ children }) => {
   let inputColor = '';
   let textColor = '';
 
-  if(mode){
+  if(window.sessionStorage.mode === "true"){
      backgroundColor = lightmodeBackground;
      elementColor = lightmodeElement;
      textColor = lightmodeText;

@@ -7,10 +7,10 @@ import LinkItem from '../link/link.component';
 const Header = () => {
 
   const [dropdown, toggleDropdown] = useState(false)
-  const { backgroundColor, elementColor, textColor, mode, dispatch, inputColor } = useContext(ThemeContext);
+  const { backgroundColor, elementColor, textColor, dispatch, inputColor } = useContext(ThemeContext);
 
   const headerRef = useRef(null);
-  const scrollRef = useRef(null)
+  const scrollRef = useRef(null);
   useEffect(() => {
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
@@ -29,6 +29,15 @@ const Header = () => {
       }
     }
   })
+
+  const handleMode = () => {
+    dispatch(toggleMode())
+    if( window.sessionStorage.mode === "false"){
+      window.sessionStorage.mode = "true"
+    }else if(window.sessionStorage.mode === "true"){
+      window.sessionStorage.mode = "false"
+    }
+  }
 
   return (
     <nav style={{ color: textColor, background: backgroundColor }} ref={headerRef} className={styles.navWrapper}>
@@ -65,8 +74,8 @@ const Header = () => {
             <LinkItem url='contact' clickHandler={() => toggleDropdown(false)}>Contact</LinkItem>
           </div>
         </div>
-        <div style={{ background: backgroundColor, color: inputColor, border: `0.13rem solid ${inputColor}` }} onClick={() => dispatch(toggleMode())} className={styles.darkMode}>
-          <i style={{ marginRight: `${!mode ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
+        <div style={{ background: backgroundColor, color: inputColor, border: `0.13rem solid ${inputColor}` }} onClick={() => handleMode()} className={styles.darkMode}>
+          <i style={{ marginRight: `${window.sessionStorage.mode==="true" ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
         </div>
         <div
           style={{ color: textColor, border: `0.1rem solid ${textColor}` }}

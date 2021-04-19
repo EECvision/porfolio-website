@@ -44,7 +44,7 @@ const PROJECT_DATA = [
     description: 'A representation of a responsive web page.',
     githubUrl: 'https://github.com/EECvision/room-homepage',
     icon: 'previewRoom',
-    tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
+    tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'TAILWINDCSS', 'HTML'],
     liveUrl: 'https://eecvision.github.io/room-homepage',
     invert: false
   },
@@ -54,7 +54,7 @@ const PROJECT_DATA = [
     description: 'A representation of a responsive web page.',
     githubUrl: 'https://github.com/EECvision/easy-banking-landing-page',
     icon: 'previewEasyBank',
-    tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
+    tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'TAILWINDCSS', 'HTML'],
     liveUrl: 'https://eecvision.github.io/easy-banking-landing-page',
     invert: true
   },
@@ -64,7 +64,7 @@ const PROJECT_DATA = [
     description: 'A simple todo app with dark mode feature, supports drag and drop.',
     githubUrl: 'https://github.com/EECvision/Todo-App',
     icon: 'previewTodo',
-    tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
+    tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'TAILWINDCSS', 'HTML'],
     liveUrl: 'https://task-flow.netlify.app/',
     invert: false
   },
