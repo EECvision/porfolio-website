@@ -77,7 +77,7 @@ const Header = () => {
           </div>
         </div>
         <div style={{ background: backgroundColor, color: inputColor, border: `0.13rem solid ${inputColor}` }} onClick={() => handleMode()} className={styles.darkMode}>
-          <i style={{ marginRight: `${window.sessionStorage.mode==="true" ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
+          <i style={{ marginRight: `${window.sessionStorage.mode==="false" ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
         </div>
         <div
           style={{ color: textColor, border: `0.1rem solid ${textColor}` }}
