@@ -36,6 +36,8 @@ const Header = () => {
       window.sessionStorage.mode = "true"
     }else if(window.sessionStorage.mode === "true"){
       window.sessionStorage.mode = "false"
+    }else {
+      window.sessionStorage.mode = "false"
     }
   }
 
