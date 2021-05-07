@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .projectsWrapper {
   width: 100%;
   max-width: 1024px;
@@ -8,13 +12,19 @@
   justify-content: flex-start;
 }
 
-.header {
+.projectHeader {
   width: 100%;
   text-align: left;
   font-family: 'Roboto Mono', monospace;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: 2rem;
   font-weight: bold;
+  text-align: left;
+}
+
+.projectHeader > div {
+  display: inline-block;
+  width: auto;
 }
 
 .projectsContainer {
@@ -23,6 +33,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  padding: 1rem;
 }
 
 
@@ -43,8 +56,8 @@
     padding: 0 1rem;
   }  
 
-  .header {
+  .projectHeader {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    text-align: center;
   }
 }

@@ -1,10 +1,16 @@
+* {
+ box-sizing: border-box;
+}
+
 .projectContainer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   position: relative;
+  padding: 1rem;
+  border-radius: 0.2rem;
 }
 
 .projectContainerInverted {
@@ -12,8 +18,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   position: relative;
+  padding: 1rem;
+  border-radius: 0.2rem;
 }
 
 .imageWrapper {

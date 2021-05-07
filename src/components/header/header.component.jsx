@@ -7,7 +7,7 @@ import LinkItem from '../link/link.component';
 const Header = () => {
 
   const [dropdown, toggleDropdown] = useState(false)
-  const { backgroundColor, elementColor, textColor, dispatch, inputColor } = useContext(ThemeContext);
+  const { backgroundColor, elementColor, textColor, dispatch, mode, modeColor, bannerColor } = useContext(ThemeContext);
 
   const headerRef = useRef(null);
   const scrollRef = useRef(null);
@@ -32,13 +32,6 @@ const Header = () => {
 
   const handleMode = () => {
     dispatch(toggleMode())
-    if( window.sessionStorage.mode === "false"){
-      window.sessionStorage.mode = "true"
-    }else if(window.sessionStorage.mode === "true"){
-      window.sessionStorage.mode = "false"
-    }else {
-      window.sessionStorage.mode = "true"
-    }
   }
 
   return (
@@ -76,8 +69,8 @@ const Header = () => {
             <LinkItem url='contact' clickHandler={() => toggleDropdown(false)}>Contact</LinkItem>
           </div>
         </div>
-        <div style={{ background: backgroundColor, color: inputColor, border: `0.13rem solid ${inputColor}` }} onClick={() => handleMode()} className={styles.darkMode}>
-          <i style={{ marginRight: `${window.sessionStorage.mode==="false" ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
+        <div style={{ background: backgroundColor, color: modeColor, border: `0.13rem solid ${bannerColor}` }} onClick={() => handleMode()} className={styles.darkMode}>
+          <i style={{ marginRight: `${!mode ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
         </div>
         <div
           style={{ color: textColor, border: `0.1rem solid ${textColor}` }}

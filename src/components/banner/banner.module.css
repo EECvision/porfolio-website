@@ -1,7 +1,14 @@
+.bannerWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .bannerContainer {
   width: 100%;
   max-width: 1024px;
-  margin-top: 2.5rem;
+  margin: 5rem 0;
 }
 
 .greetingContainer {
@@ -30,7 +37,8 @@
 .textContainer {
   width: auto;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: lighter;
   max-width: 37.5rem;
 }

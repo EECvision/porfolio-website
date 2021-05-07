@@ -5,16 +5,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .aboutHeader {
   width: 100%;
-  text-align: left;
   font-family: 'Roboto Mono', monospace;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.aboutHeader > div {
+  width: auto;
+  display: inline-block;
 }
 
 .aboutSection {
@@ -31,12 +35,14 @@
 
 .aboutText {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  line-height: 2.2rem;
+  font-family: 'Roboto Slab', serif;
 }
 
 .toolHeader {
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -61,15 +67,15 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.2rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .imageContainer {
   position: relative;
   width: 100%;
   height: auto;
-  top: -1rem;
-  right: 1rem;
+  top: -0.5rem;
+  right: 0.5rem;
   border-radius: 0.2rem;
 }
 
@@ -92,7 +98,7 @@
   }
 
   .aboutSection {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: flex-start;
   }
@@ -105,6 +111,7 @@
   .imageWrapper {
     width: 100%;
     max-width: 14rem;
+    margin-bottom: 2rem;
   }
   
 }
@@ -122,6 +129,5 @@
 
   .aboutText {
     font-size: 1rem;
-    text-align: center;
   }
 } 
