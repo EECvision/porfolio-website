@@ -17,7 +17,7 @@ const ThemeContextProvider = ({ children }) => {
   let lightmodeBanner = ' hsl(217, 90%, 61%)';
   let lightmodeMode = 'hsl(51, 100%, 47%)';
   let lightmodeHeader = 'hsl(240, 91%, 70%)';
-  let lightmodeProject = 'hsl(0, 0%, 60%)';
+  let lightmodeProject = 'hsl(0, 0%, 80%)';
   let darkmodeProject = 'hsl(0, 0%, 5%)';
 
   let backgroundColor = '';

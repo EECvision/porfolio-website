@@ -8,6 +8,7 @@ import previewShop from '../../assets/preview-shop.png';
 import previewCountry from '../../assets/preview-country.png';
 import { useContext } from 'react';
 import { ThemeContext } from '../../states/theme/theme.context';
+import { animated } from 'react-spring';
 
 const previews = {
   previewEasyBank: previewEasyBank,
@@ -19,11 +20,11 @@ const previews = {
   previewShop: previewShop
 }
 
-const Project = ({ name, description, liveUrl, githubUrl, icon, invert, tools }) => {
+const Project = ({ name, description, liveUrl, githubUrl, icon, invert, tools, css }) => {
   const { textColor, elementColor, backgroundColor, inputColor, projectBorder } = useContext(ThemeContext);
 
   return (
-    <div style={{ color: textColor, boxShadow: `2px 2px 5px ${projectBorder}` }} className={invert ? styles.projectContainerInverted : styles.projectContainer}>
+    <animated.div style={{ ...css, color: textColor, boxShadow: `2px 2px 5px ${projectBorder}` }} className={invert ? styles.projectContainerInverted : styles.projectContainer}>
       <div className={invert ? styles.imageWrapperInverted : styles.imageWrapper}>
         <img className={styles.imageContainer} src={previews[icon]} alt={`${name}`} />
       </div>
@@ -48,7 +49,7 @@ const Project = ({ name, description, liveUrl, githubUrl, icon, invert, tools })
           <li style={{ border: `0.1rem solid ${inputColor}`, color: textColor }} className={styles.link}><a href={liveUrl}><i className="fas fa-external-link-alt"></i></a></li>
         </ul>
       </div>
-    </div>
+    </animated.div>
   )
 }
 
