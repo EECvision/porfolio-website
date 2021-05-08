@@ -35,19 +35,17 @@ const ThemeContextProvider = ({ children }) => {
   let headerBorder = '';
   let projectBorder = '';
 
-  if (mode) {
+  if (mode !== "false") {
     modeColor = lightmodeMode;
     backgroundColor = lightmodeBackground;
     elementColor = lightmodeElement;
     textColor = lightmodeText;
     inputColor = lightmodeInput;
-
     buttonColor = lightmodeBanner;
     buttonColorInverse = darkmodeText;
     buttonBackground = darkmodeText;
     buttonBackgroundInverse = lightmodeBanner;
     buttonBorder = lightmodeBanner;
-    
     bannerBackground = lightmodeBanner;
     bannerColor = darkmodeText;
     headerBorder = lightmodeHeader;

@@ -31,6 +31,11 @@ const Header = () => {
   })
 
   const handleMode = () => {
+    if(window.sessionStorage.mode === "false"){
+      window.sessionStorage.setItem("mode", "true")
+    }else {
+      window.sessionStorage.setItem("mode", "false")
+    }
     dispatch(toggleMode())
   }
 
@@ -70,7 +75,7 @@ const Header = () => {
           </div>
         </div>
         <div style={{ background: backgroundColor, color: modeColor, border: `0.13rem solid ${bannerColor}` }} onClick={() => handleMode()} className={styles.darkMode}>
-          <i style={{ marginRight: `${!mode ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
+          <i style={{ marginRight: `${mode === "false" ? '-1rem' : '1rem'}` }} className="fas fa-sun"></i>
         </div>
         <div
           style={{ color: textColor, border: `0.1rem solid ${textColor}` }}
