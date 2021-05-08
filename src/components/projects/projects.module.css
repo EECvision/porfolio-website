@@ -19,6 +19,7 @@
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
+  padding: 0.1rem;
 }
 
 .projectHeader {
