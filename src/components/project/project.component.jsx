@@ -3,7 +3,7 @@ import previewEasyBank from '../../assets/preview-easy-bank.jpg';
 import previewRoom from '../../assets/preview-room.jpg';
 import previewTodo from '../../assets/preview-todo.jpg';
 import previewNote from '../../assets/preview-note.PNG';
-import previewNuf from '../../assets/preview-nuf.png';
+import previewUpbeat from '../../assets/preview-upbeat.png';
 import previewShop from '../../assets/preview-shop.png';
 import previewCountry from '../../assets/preview-country.png';
 import { useContext } from 'react';
@@ -16,7 +16,7 @@ const previews = {
   previewRoom: previewRoom,
   previewTodo: previewTodo,
   previewNote: previewNote,
-  previewNuf: previewNuf,
+  previewUpbeat: previewUpbeat,
   previewShop: previewShop
 }
 
@@ -26,7 +26,7 @@ const Project = ({ name, description, liveUrl, githubUrl, icon, invert, tools, c
   return (
     <animated.div style={{ ...css, color: textColor, boxShadow: `2px 2px 5px ${projectBorder}` }} className={invert ? styles.projectContainerInverted : styles.projectContainer}>
       <div className={invert ? styles.imageWrapperInverted : styles.imageWrapper}>
-        <img className={styles.imageContainer} src={previews[icon]} alt={`${name}`} />
+        <a target="_blank" rel="noreferrer" href={liveUrl}><img className={styles.imageContainer} src={previews[icon]} alt={`${name}`} /></a>
       </div>
       <div className={invert ? styles.dataContainerInverted : styles.dataContainer}>
         <div className={styles.nameLinks}>

@@ -2,11 +2,11 @@ const PROJECT_DATA = [
   {
     id: 1,
     name: 'splendor-luxeel',
-    description: 'An e-commerce website aimed to support small and medium business(s).',
+    description: 'An e-commerce website aimed to support small and medium businesses in advertising their products to their targeted customers.',
     githubUrl: 'https://github.com/EECvision/splendor-luxeel',
     icon: 'previewShop',
     liveUrl: 'https://splendor-luxeel.vercel.app',
-    tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
+    tools: ['REACT', 'JAVASCRIPT', 'STRIPE', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
     invert: false
   },
   {
@@ -21,11 +21,11 @@ const PROJECT_DATA = [
   },
   {
     id: 3,
-    name: 'nuf9ja',
+    name: 'Upbeat',
     description: 'A music website for publishing, downling and sharing of songs.',
-    icon: 'previewNuf',
+    icon: 'previewUpbeat',
     tools: ['REACT', 'JAVASCRIPT', 'GITHUB', 'REDUX', 'TAILWINDCSS', 'FIREBASE'],
-    liveUrl: 'https://nuf9ja.herokuapp.com',
+    liveUrl: 'https://up-beat.vercel.app',
     invert: false
   },
   {
